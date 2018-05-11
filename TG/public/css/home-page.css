@@ -1,0 +1,1030 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.classname {
+    color: #C81013;
+}
+
+body {
+    margin: 0px;
+    font-family: Roboto Condensed, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #373a3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container-header {
+    /* contain of slide at top*/
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.slide-contain {
+    display: block;
+    transition: 2s ease-in opacity;
+    opacity: 1;
+}
+.container-header:hover .next,
+.container-header:hover .prev {
+    opacity: 1;
+}
+
+.dot {
+    height: 4px;
+    width: 35px;
+    position: relative;
+    bottom: 80px;
+	right:2%;/* it work with div style that conatain this dot */
+    background-color: rgba(243, 240, 240, 0.5);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .dot {
+        bottom: 40px;
+    }
+}
+
+.make-background,
+.dot:hover {
+    background-color: white;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 20s;
+    animation-name: fade;
+    animation-duration: 20s;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0.6;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    92% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.2;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 0.2;
+    }
+}
+
+
+
+.background-img {
+    /* slide image background  of top */
+    width: 100%;
+    height: 600px;
+
+}
+.logo {
+    /* div for logo side*/
+    width: 30%;
+    height: 91px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding-left: 20px;
+
+}
+
+.logo img {
+    width: auto;
+    height: 51px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.logo p {
+    font-size: 14px;
+    color:#33cc33;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+.navigation-bar {
+    width: 100%;
+    height: 155px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-bottom: none;
+}
+
+
+/* Add background=none to navigation of about section logo in about div*/
+
+.background-none {
+    background: none;
+}
+
+.navbar-nav {
+    height: 95px;
+    background-color: #33cc33;
+    padding-right: 20px;
+    margin-right:-25px;
+    margin-top: -5px;
+}
+
+.navigation-list #menu #menu1 {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.navigation-list #menu #menu1:nth-child(1){
+    width:0px;
+
+}
+.navbar-nav #menu1 .color-a {
+    color: white !important;
+}
+#nav-hide:after {/*make trigle background on menu bar*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-width: 48px;
+    border-style: solid;
+    border-color: transparent  #33cc33  #33cc33 transparent;
+    margin-top:0px;
+
+}
+
+.navigation-shadow {
+    box-shadow: #000 2px 0px 4px;
+    position: fixed;
+}
+
+.navigation-list #menu #menu1 a.focus::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    width: 25px;
+    position: relative;
+    margin: auto;
+}
+.navbar-inverse .navbar-toggle{
+    border: none;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: transparent;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border: none;
+}
+/* style for Introduction in center of header*/
+
+.intro-in-header {
+    width: 70%;
+    height: 120px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.54);
+    position: absolute;
+    top: 250px;
+    left: 15%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.intro-in-header p {
+    color: white;
+    text-indent: 20px;
+}
+
+
+/* style for button of quote request text*/
+
+.button-head {
+    position: absolute;
+    top: 200px;
+    left:36%;
+    /*text-align: center;*/
+    background-color: #33cc33;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+.button-head:hover {
+    opacity: 0.7;
+    color: white;
+}
+/* about section */
+.container-about {
+    background-color: rgba(188, 184, 184, 0.15);
+}
+
+.about-text {
+    /* div contain only text of about */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* title*/
+
+.about-text h3 {
+    margin: 0px;
+    display: inline;
+}
+
+h3.green{
+    color: #33cc33;
+}
+
+.about-text p {
+    margin-top: 40px;
+}
+
+
+/* image contain*/
+
+.about-contain-img {
+    margin-top: 40px;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+
+}
+
+
+.product-title {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.product-title h3 {
+    font-size: 24px;
+    color:  #33cc33;
+    padding: 5px;
+    border-bottom:  #33cc33 1px groove;
+    display: inline-block;
+}
+.product-img  {
+    width: 95%;
+    /*height: 300px;*/
+}
+h4.caption {
+    color: #16AC92;
+    margin: 0px;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.line-btm{
+    width: 10%;text-align: center;border: 1px solid  #33cc33;
+}
+/* for add float to image  in product section*/
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.padding-btm{
+    padding-bottom:60px;
+}
+/* contain blur image  at bottom*/
+
+.contain {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Picture/Home-page-img/Angkorwat-blur.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bottom-img {
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    position: relative;
+    /* The image used */
+}
+.more-on-intro {
+    top: 100px;
+    background-color: transparent;
+	left:15%;
+}
+
+.more-on-btn {
+    /* it take style more on style of button in header slide*/
+    top: 200px;
+    left:500px;
+}
+/* follow us div*/
+.follow-us-contain {
+    width: 100%;
+    height: 300px;
+    color: #33cc33;
+    text-align: center;
+    background-color: rgba(188, 184, 184, 0.15);
+}
+
+
+/* style line (hr tag) in Bottom*/
+
+hr.line-col-fade-left-right {
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #e8e8e8, transparent);
+    max-width: 400px;
+}
+
+hr.marg-md {
+    margin: 3rem auto;
+}
+
+.contain-social-media {
+    /* contain social media button*/
+    width: 50%;
+    height: 100px;
+    margin-left: 25%;
+    margin-top: 60px;
+}
+
+
+/* style on social media image */
+
+.Fb {
+    width: 7%;
+    height: 48px;
+    margin-right: 30px;
+}
+
+.Tw {
+    width: 8%;
+    height: 60px;
+    margin-left: 40px;
+}
+
+.Gp {
+    width: 8%;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.In {
+    width: 12%;
+    height: 60px;
+    margin-left: 40px;
+}
+
+.Yt {
+    width: 8%;
+    height: 60px;
+    margin-left: 40px;
+}
+
+.Fb:hover,
+.Tw:hover,
+.Gp:hover,
+.In:hover,
+.Yt:hover {
+    opacity: 0.8;
+}
+
+
+/* style for make at bottom*/
+
+.at-bottom {
+    position: absolute;
+    background-color:  #33cc33;
+    text-align: center;
+    color: #2B2626;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+.contact-text{
+    text-align: center;
+    color:#2B2626;
+    marrgin-top:0;
+}
+.at-bottom p {
+    margin-top: 50px;
+}
+
+.at-bottom p a {
+    color: white;
+    cursor: pointer;
+}
+
+/*style for other place might you like*/
+.other-place-container{
+    color: #33cc33;
+    text-align: center;
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin-left:20px;
+    position: relative;
+}
+
+.other-place-container .each-place-container{
+    background-color: green;
+    margin-bottom: 30px;
+    height: auto;
+    position:relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+.other-place-container .each-place-container:hover{
+    box-shadow: 0 11px 25px rgba(0,0,0,0.12),0 12px 25px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.other-place-container .each-place-container img{
+    position:relative;
+    width:100%;
+    height:200px;
+}
+.other-place-container .each-place-container .img-title{
+    position: absolute;
+    width:100%;
+    top:50%;
+    font-size:18px;
+    font-weight:bold;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    transition: top 1s ease;
+}
+.other-place-container .each-place-container:hover .img-title{
+    top:50px;
+}
+.other-place-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.other-place-container .each-place-container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+}
+.other-place-container .button {
+    position: absolute;
+    top:70%;
+    right: 40%;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.other-place-container .button a {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color:#33cc33;
+    z-index: 1;
+}
+
+.other-place-container .each-place-container:hover .button {
+    opacity: 1;
+}
+
+/*style for more place text*/
+#more-place .more-text {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+#more-place .more-text a{
+    color:#33cc33;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#more-place .more-text a:hover{
+    border-bottom: solid 2px #33cc33;
+}
+    /*end place may you like*/
+/*this style for back2top button*/
+#back2Top{
+    display: none;/* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 5%; /* Place the button at the bottom of the page */
+    right: 10%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:#33cc33; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 20px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    transition: backgroud-color 0.5s ease;
+    -moz-transform: rotate(270deg);/*rotate arrow sign go up*/
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+#back2Top:hover {
+    background-color:rgba(152,230,152,0.81); /* Add a dark-grey background on hover */
+    box-shadow:#98e698 2px 2px 4px;
+    color:#12728e;
+}
+/*for search bar*/
+#wrap {
+    margin: 5px 100px 10px;
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width:100%;
+    float: right;
+    padding: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #BBB;
+
+}
+
+input[type="text"] {
+    background:none;
+    height: 50px;
+    font-size: 30px;
+    display: inline-block;
+    font-family: "Lato";
+    font-weight: 100;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 3px;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    bottom:30px;
+    right: 0;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+    border-bottom: 1px solid #BBB;
+}
+input[type="text"]:focus {
+    width: 680px;
+    z-index: 1;
+    border-bottom: 1px solid #BBB;
+    cursor: text;
+}
+input[type="submit"] {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    color:red;
+    float: right;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+    border: none;
+    background-color: #33cc33;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity:0.4;
+    transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Make Resposive of the website*/
+/* make responsive navigation bar */
+@media screen and (max-width: 980px) {
+    .navbar-nav {
+        height: 80px;
+    }
+    .navigation-bar {
+        height: 140px;
+    }
+    .navigation-list #menu #menu1  {
+        margin-top:6px;
+    }
+    .navigation-list #menu #menu1 a {
+        font-size: 14px;
+    }
+    #nav-hide:after {
+        border-width: 40px;
+        margin-top:0px;
+    }
+
+    /* change style of logo in navbar with max-screen size =980px*/
+    .logo {
+        width: 200px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 35px;
+        margin-bottom: 0px;
+        margin-top:5px;
+        margin-left:0px;
+    }
+
+    .logo p {
+        font-size: 12px;
+        margin-top: 0px;
+        margin-left:0px;
+        position: absolute;
+        z-index: 10;
+    }
+
+}
+/* responsive for ipad*/
+@media screen and (max-width: 850px) and (min-width: 769px) {
+    .logo {
+        padding-left: 0px;
+        width: 150px;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .logo p {
+        margin-left: 20px;
+        font-size: 10px;
+    }
+
+    .intro-in-header {
+        height: 150px;
+        top: 200px;
+    }
+
+    .dot {
+        left: 3%;
+    }
+
+    .more-on-intro {
+        top: 60px;
+    }
+}
+@media screen and (max-width:768px) {
+    body {
+        font-size: 14px;
+    }
+    .container-header,
+    .slide-contain,
+    .background-img {
+        height: 500px;
+    }
+    .slide-contain .intro-in-header {
+        width: 80%;
+        height: 100px;
+        position: absolute;
+        top: 200px;
+        left: 10%;
+    }
+    .button-head {
+        top: 120px;
+        left: 42%;
+        padding: 10px;
+        font-size: 11px;
+    }
+    .about-contain-img {
+        height: auto;
+        width:300px;
+        left:200px;
+    }
+    .about-image {
+        /*height: 430px;*/
+    }
+    .product-img  {
+        width: 90%;
+        /*height: 200px;*/
+        margin-left: 15px;
+    }
+    /*.more-on-btn {*/
+    /*top: 240px;*/
+    /*left: 40%;*/
+    /*}*/
+    .at-bottom ul {
+        font-size: 14px;
+    }
+    .contain-social-media {
+        /* contain social media button*/
+        width: 70%;
+        margin-left: 15%;
+    }
+    .intro-in-header {
+        height: 150px;
+        top: 200px;
+        font-size: 16px;
+    }
+
+    .dot {
+        left: 1%;
+    }
+    /*responsive for search bar*/
+    input[type="text"] {
+        font-size: 20px;
+
+    }
+    input[type="submit"] {
+        height: 50px;
+        width: 50px;
+    }
+    input[type="text"]:focus {
+        width: 500px;
+    }
+
+
+}
+@media screen and (max-width: 767px){
+    .logo {
+        padding-left: 0px;
+        width: 200px;
+    }
+    .logo img {
+        width: 100px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    .logo p {
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    .navigation-list #menu #menu1 a.focus::after {
+        margin: 0;
+    }
+    .navbar-nav {
+        height: auto;
+        margin: 7.5px -15px;
+        margin-top: 12px;
+    }
+    .more-on-intro {
+        top: 60px;
+        background-color: transparent;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 416px){
+    .slide-contain .intro-in-header {
+        width: 80%;
+        height: 150px;
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        font-size: 14px;
+    }
+    .slide-contain .intro-in-header p {
+        margin-top: 20px;
+    }
+    .button-head{
+        opacity: 0;
+    }
+}
+/* responsive for smartphone 415px */
+@media screen and (max-width:415px) {
+    body {
+        font-size: 14px;
+    }
+    .container-header,
+    .slide-contain,
+    .background-img {
+        height: 400px;
+    }
+    .slide-contain .intro-in-header {
+        width: 80%;
+        height: 100px;
+        position: absolute;
+        top: 200px;
+        left: 10%;
+        font-size: 11px;
+    }
+    .slide-contain .intro-in-header p {
+        margin-top: 20px;
+    }
+    .button-head {
+        opacity: 0;
+    }
+    .about-contain-img {
+        height: 150px;
+        margin-top: 20px;
+    }
+    .about-image {
+        /*height: 360px;*/
+    }
+    .about-logo {
+        width: 50%;
+        padding-left: 5px;
+    }
+    .about-logo img {
+        height: 30px;
+        margin-left: 10px;
+    }
+    .about-logo p {
+        font-size: 11px;
+        color: white;
+        margin-left: 10px;
+    }
+
+    .at-bottom {
+        height: 300px;
+    }
+    .bottom-img p {
+        font-size: 11px;
+    }
+    .more-on-btn {
+        top: 240px;
+        left: 30%;
+    }
+    .at-bottom ul li {
+        display:list-item;
+        padding-left:10px;
+    }
+    .container .line-btm{
+        width:60%;
+    }
+    /*responsive for search bar*/
+    #wrap{
+      margin-right: 20px;
+    }
+    input[type="text"] {
+        font-size: 20px;
+    }
+    input[type="text"]:focus {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 506px) and (min-width: 333px) {
+
+    .contain-social-media {
+        /* contain social media button*/
+        width: 60%;
+        margin-left: 20%;
+    }
+    .Fb {
+        width: 10%;
+        height: 45px;
+        margin-right: 0px;
+    }
+    .Tw {
+        width: 10%;
+        height: 57px;
+        margin-left: 20px;
+    }
+    .Gp {
+        width: 10%;
+        height: 47px;
+        margin-left: 20px;
+    }
+    .In {
+        width: 14%;
+        height: 47px;
+        margin-left: 20px;
+    }
+    .Yt {
+        width: 10%;
+        height: 57px;
+        margin-left: 20px;
+    }
+    .at-bottom ul {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width:378px) {
+    .logo {
+        padding-left: 0px;
+        width:200px;
+    }
+    .logo img {
+        width: 100px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    .logo p {
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    .button-head {
+        display: none;
+    }
+
+    .about-logo {
+        width: 50%;
+        padding-left: 5px;
+    }
+    .about-logo img {
+        height: 25px;
+        margin-left: 10px;
+    }
+    .about-logo p {
+        font-size: 11px;
+        color: white;
+        margin-left: 10px;
+    }
+
+    .container .line-btm{
+        width:60%;
+    }
+    .bottom-img p {
+        font-size: 11px;
+    }
+    .more-on-btn {
+        top: 240px;
+        left: 30%;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 332px)  {
+    .contain-social-media {
+        /* contain social media button*/
+        width: 60%;
+        margin-left: 20%;
+    }
+    .Fb {
+        width: 10%;
+        height: 45px;
+        margin-right: 0px;
+    }
+    .Tw {
+        width: 10%;
+        height: 57px;
+        margin-left: 16px;
+    }
+    .Gp {
+        width: 10%;
+        height: 47px;
+        margin-left: 16px;
+    }
+    .In {
+        width: 14%;
+        height: 47px;
+        margin-left: 16px;
+    }
+    .Yt {
+        width: 10%;
+        height: 57px;
+        margin-left: 16px;
+    }
+    .at-bottom ul {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+
+}
